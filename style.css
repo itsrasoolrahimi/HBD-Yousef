@@ -1,0 +1,123 @@
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body as a terminal window */
+body {
+  background: #0d0d0d;
+  color: #00ff41;
+  font-family: 'Source Code Pro', monospace;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Pages */
+.page {
+  display: none;
+}
+.page:not(.hidden) {
+  display: block;
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Inputs */
+input[type="number"] {
+  background: transparent;
+  border: 2px solid #00ff41;
+  color: #00ff41;
+  font-size: 1.1em;
+  padding: 8px 12px;
+  border-radius: 4px;
+  width: 180px;
+  text-align: center;
+  outline: none;
+}
+input::placeholder {
+  color: rgba(0, 255, 65, 0.5);
+}
+
+/* Buttons */
+button {
+  background: #111;
+  border: 2px solid #00ff41;
+  color: #00ff41;
+  padding: 10px 24px;
+  margin-top: 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+}
+button:hover {
+  box-shadow: 0 0 8px #00ff41, inset 0 0 4px #00ff41;
+}
+button:active {
+  background: #00ff41;
+  color: #0d0d0d;
+}
+
+/* Feedback text */
+#guess-feedback {
+  margin-top: 12px;
+  font-style: italic;
+  min-height: 1.2em;
+}
+
+/* Headings */
+h1 {
+  font-size: 2em;
+  text-shadow:
+    1px 1px 0 #00ff41,
+    -1px -1px 0 #00ff41,
+    1px -1px 0 #00ff41,
+    -1px 1px 0 #00ff41;
+  margin-bottom: 20px;
+}
+
+/* Image */
+img {
+  max-width: 300px;
+  margin-top: 20px;
+  border: 2px solid #00ff41;
+  box-shadow: 0 0 12px rgba(0,255,65,0.6);
+  border-radius: 6px;
+}
+
+/* Audio */
+audio {
+  margin-top: 20px;
+  outline: none;
+  filter: hue-rotate(90deg) contrast(1.2);
+}
+
+/* Next button wrapper */
+.next-wrapper {
+  margin-top: 20px;
+}
+#next-button {
+  display: none; /* reveal via JS after lyrics end */
+}
+
+/* Lyrics fade animation */
+.lyrics {
+  min-height: 1.4em;
+  font-style: italic;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.lyrics.show {
+  opacity: 1;
+}
+
+/* Fade‑in page animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

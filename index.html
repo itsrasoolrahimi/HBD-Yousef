@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HDB Yousef !!!</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="favicon-16x16.png">
+</head>
+<body>
+  <!-- Step 1: Guess Page -->
+  <div id="guess-page" class="page">
+    <h1>Guess the special number 🎁</h1>
+    <input type="number" id="guess-input" placeholder="0 - 100" />
+    <button id="guess-button">Submit</button>
+    <p id="guess-feedback"></p>
+  </div>
+
+  <!-- Step 2: Music Page -->
+  <div id="music-page" class="page hidden">
+    <h1>🎵 Song name: H-20th-BD  Yousef :))) !</h1>
+    <div id="lyrics" class="lyrics"></div>
+    <audio id="audio" controls src="music.mp3"></audio>
+    <div class="next-wrapper">
+      <button id="next-button">Next</button>
+    </div>
+  </div>
+
+  <!-- Step 3: Birthday Card -->
+  <div id="card-page" class="page hidden">
+    <h1>🎉 Happy Birthday Yousef :) 🎉</h1>
+    <p>I wish you a long and happy life Habibi 🥳</p>
+    <img src="cat.gif" alt="Birthday Image" />
+    <p style="padding-top: 1rem">— From your friend, Rasool ❤️</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
